@@ -19,6 +19,7 @@
                 font-weight: 200;
                 height: 100vh;
                 margin: 0;
+                overflow: hidden;
             }
 
             .full-height {
@@ -106,8 +107,8 @@
                 <div class="content">
                     <div class="w_logo">
                         <img src="{{asset('asset/logo.svg')}}" alt="logo">
-                        <h1>HELPME</h1>
-                        <p> Версия 1.0 - Альфа - тестирование <br>
+                        <h1>HELP ME BY</h1>
+                        <p> Версия 1.3 - Альфа - тестирование <br>
                             Место, где собраны волонтеры, готовы оказать помощь пострадавшим во время мирных акций на территории Республики Беларусь
                         </p>
                     </div>

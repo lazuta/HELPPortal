@@ -32,7 +32,7 @@
                                 <option>Выберите статус</option>
                                 <option value="active">Активно</option>
                                 <option value="work">В работе</option>
-                                <option value="X">Не активен</option>
+                                <option value="X" selected>Не активен</option>
                             </select>
                         </div>
 
