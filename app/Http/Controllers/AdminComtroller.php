@@ -21,7 +21,7 @@ class AdminComtroller extends Controller
             'public' => true
         ]);
 
-        return view('admin');
+        return redirect()->view('admin');
     }
 
     public function no(Request $request, $id)
@@ -32,6 +32,6 @@ class AdminComtroller extends Controller
             'public' => false
         ]);
 
-        return view('admin');
+        return redirect()->view('admin');
     }
 }
