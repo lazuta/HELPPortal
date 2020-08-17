@@ -95,5 +95,8 @@
     <script>
         $("#phone").inputmask({"mask": "+375 (99) 999-99-99"});
     </script>
+        <script src="{{ asset('js/script.js') }}"></script>
+
+
 </body>
 </html>

@@ -23,6 +23,5 @@ Route::post('/home/updateInf/{id}', 'UserController@updateInf')->name('update.in
 
 
 Route::prefix('help')->group(function() {
-    Route::get('/', 'HelpController@index')->name('article.show');
-    
+    Route::get('/', 'HelpController@index')->name('help.show');
 });

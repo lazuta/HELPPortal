@@ -2,9 +2,18 @@
 
 @section('content')
 
+
 <div class="container">
+
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Начните воодить" aria-label="Начните воодить" aria-describedby="basic-addon2" id="search">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="button">Поиск</button>
+        </div>
+      </div>
+
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-8" id="cards">
 
             @foreach ($users as $user)
                 <div class="card" style="margin-bottom: 10px;">
@@ -19,7 +28,7 @@
                         @IF($user->description)
                             <h6 class="card-title">Могу Вам помочь:</h6>
 
-                            {{ $user->description }}
+                            <p>{{ $user->description }}</p>
                         @ENDIF
                     </div>
                     <div class="card-footer">
