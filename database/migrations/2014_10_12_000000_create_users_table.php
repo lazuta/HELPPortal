@@ -19,6 +19,14 @@ class CreateUsersTable extends Migration
             $table->string('description');
             $table->string('phone');
             $table->enum('role',['admin','doctor','psychologist', 'rehabilitologist']);
+            $table->enum('status',['active','wait','work', 'X']);
+            
+            $table->boolean('telegram_b');
+            $table->boolean('viber_b');
+            $table->boolean('whatsapp_b');
+            $table->boolean('email_b');
+            $table->boolean('phone_b');
+
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');

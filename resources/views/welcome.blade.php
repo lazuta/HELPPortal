@@ -8,6 +8,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <link rel="shortcut icon" href="{{asset('asset/logo.svg')}}" type="image/x-icon">
 
         <!-- Styles -->
         <style>
@@ -61,37 +62,55 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+
+            .w_logo h1 {
+                font-size: 2.5em;
+                color: #2D2E83;
+            }
+
+            .w_logo img {
+                width: 500px;
+            }
+
+            @media(max-width: 560px) {
+                .w_logo img {
+                    width: 300px;
+                }
+            }
+
+            @media(max-width: 330px) {
+                .w_logo img {
+                    width: 200px;
+                }
+            }
         </style>
     </head>
     <body>
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
+                        <a href="{{ url('/help') }}">Помощь</a>
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a href="{{ url('/home') }}">Главная</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
+                        <a href="{{ route('login') }}">Авторизация</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
+                            <a href="{{ route('register') }}">Регистрация</a>
                         @endif
                     @endauth
                 </div>
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                <div class="content">
+                    <div class="w_logo">
+                        <img src="{{asset('asset/logo.svg')}}" alt="logo">
+                        <h1>HELPME</h1>
+                        <p> Версия 1.0 - Альфа - тестирование. <br>
+                            Место, где собраны валантеры, готовые окзать помощь пострадавшим во время мирных акций на территории Республики Беларусь
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>

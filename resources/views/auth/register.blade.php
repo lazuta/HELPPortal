@@ -53,6 +53,33 @@
                             </div>
                         </div>
 
+                        <div class="form-group row d-flex justify-content-center">
+                            <div class="form-check  form-check-inline">
+                                <input type="checkbox" class="form-check-input" id="telegram" name="telegram">
+                                <label class="form-check-label" for="telegram" >Telegram</label>
+                            </div>
+
+                            <div class="form-check  form-check-inline">
+                                <input type="checkbox" class="form-check-input" id="Viber" name="Viber">
+                                <label class="form-check-label" for="Viber" >Viber</label>
+                            </div>
+
+                            <div class="form-check  form-check-inline">
+                                <input type="checkbox" class="form-check-input" id="whatsapp" name="whatsapp">
+                                <label class="form-check-label" for="whatsapp" >Whatsapp</label>
+                            </div>
+
+                            <div class="form-check  form-check-inline">
+                                <input type="checkbox" class="form-check-input" id="phone_b" name="phone_b">
+                                <label class="form-check-label" for="phone_b" >Телефон</label>
+                            </div>
+
+                            <div class="form-check  form-check-inline">
+                                <input type="checkbox" class="form-check-input" id="mail_p" name="mail_p">
+                                <label class="form-check-label" for="mail_p" >Почта</label>
+                            </div>
+                        </div>
+
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Направление') }}</label>
 
