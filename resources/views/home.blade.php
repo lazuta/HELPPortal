@@ -20,8 +20,8 @@
                                     <span class="badge badge-success">Активно</span>
                                 @ENDIF
                                 
-                                @IF($user->role[0]->role_ru)
-                                    - {{ $user->role[0]->role_ru }}
+                                @IF($user->role->role_ru)
+                                    - {{ $user->role->role_ru }}
                                 @ENDIF
                             </label>
                             <select class="form-control form-control-sm" name='status' required>

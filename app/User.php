@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'description', 'phone', 'telegram_b', 'viber_b', 'whatsapp_b', 'email_b', 'phone_b', 'status'
+        'name', 'email', 'password', 'description', 'phone', 'telegram_b', 'viber_b', 'whatsapp_b', 'email_b', 'phone_b', 'status', 'role_id'
     ];
 
     /**
@@ -39,6 +39,7 @@ class User extends Authenticatable
 
     public function role()
     {
-        return $this->hasMany('App\Role', 'id');
+        return $this->hasOne('App\Role', 'id');
     }
+
 }

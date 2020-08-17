@@ -35,15 +35,10 @@ class UserController extends Controller
         ]);
 
         User::find($id)->update([
-            'description' => $request['descr']
+            'description' => $request['descr'],
+            'role' => $request['role']
         ]);
-
-        UserRole::create([
-            'user_id' => $id,
-            'role_id' => $request['role']
-        ]);
-
-
+        
         return redirect()->route('home');
     }
 }

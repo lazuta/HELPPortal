@@ -68,7 +68,7 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'phone' => $data['phone'],
-            'role' => '',
+            'role_id' => 1,
             'status' => 'X',
             'description' => '',
             'telegram_b' => (!empty($data['telegram']) ? true : false),

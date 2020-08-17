@@ -19,6 +19,8 @@ class CreateUsersTable extends Migration
             $table->string('description');
             $table->string('phone');
             $table->enum('status',['active','wait','work', 'X']);
+            $table->bigInteger('role_id')->unsigned();
+            $table->foreign('role_id')->references('id')->on('roles')->onDelete('cascade');
             $table->boolean('telegram_b');
             $table->boolean('viber_b');
             $table->boolean('whatsapp_b');

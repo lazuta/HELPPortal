@@ -12,13 +12,9 @@ class Role extends Model
         'role', 'role_id', 'user_id'
     ];
 
-    public function userRole()
-    {
-        return $this->belongsTo('App\UserRole', 'role_id', 'id');
-    }
-
+    
     public function user()
     {
-        return $this->belongsTo('App\Users', 'user_id', 'id');
+        return $this->hasOne('App\User', 'role_id');
     }
 }

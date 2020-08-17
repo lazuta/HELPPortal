@@ -18,8 +18,8 @@
             @foreach ($users as $user)
                 <div class="card" style="margin-bottom: 10px;">
                     <div class="card-header">
-                            @IF($user->role[0]->role_ru)
-                            <span class="badge badge-pill badge-secondary">{{ $user->role[0]->role_ru }}</span>
+                            @IF($user->role->role_ru)
+                                <span class="badge badge-pill badge-secondary">{{ $user->role->role_ru }}</span>
                             @ENDIF
 
                             {{ $user->name }}

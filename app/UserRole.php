@@ -9,11 +9,17 @@ class UserRole extends Model
     protected $table = 'role_user';
 
     protected $fillable = [
-        'role_id', 'user_id'
+        'user_id', 'role_id', 'user_id'
     ];
 
-    public function role()
+    public function roleName()
     {
-        return $this->hasMany('App\Role', 'id');
+        return $this->belongsTo('App\Role');
     }
+
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
+    
 }
