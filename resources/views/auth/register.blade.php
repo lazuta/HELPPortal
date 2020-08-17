@@ -81,37 +81,6 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Направление') }}</label>
-
-                            <div class="col-md-6">
-                                <select class="form-control" name="role" class="form-control @error('role') is-invalid @enderror" required>
-                                    <option disabled>Выберите ваше направлнеи</option>
-                                    <option value="doctor">Доктор</option>
-                                    <option value="psychologist">Психолог</option>
-                                    <option value="rehabilitologist">Реабилитолог</option>
-                                </select>
-                                @error('role')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="descr" class="col-md-4 col-form-label text-md-right">{{ __('Описание') }}</label>
-
-                            <div class="col-md-6">
-                                <textarea class="form-control @error('descr') is-invalid @enderror" id="exampleFormControlTextarea1 descr" rows="3" name="descr"></textarea>
-                                @error('descr')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Пароль') }}</label>
 
                             <div class="col-md-6">

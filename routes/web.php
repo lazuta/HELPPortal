@@ -19,6 +19,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
 Route::post('/home/update/{id}', 'UserController@update')->name('update')->middleware('auth');
+Route::post('/home/updateInf/{id}', 'UserController@updateInf')->name('update.inf')->middleware('auth');
 
 
 Route::prefix('help')->group(function() {
