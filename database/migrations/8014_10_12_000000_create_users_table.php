@@ -26,6 +26,7 @@ class CreateUsersTable extends Migration
             $table->boolean('whatsapp_b');
             $table->boolean('email_b');
             $table->boolean('phone_b');
+            $table->boolean('public');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');

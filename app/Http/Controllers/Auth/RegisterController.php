@@ -71,6 +71,7 @@ class RegisterController extends Controller
             'role_id' => 1,
             'status' => 'X',
             'description' => '',
+            'public' => false,
             'telegram_b' => (!empty($data['telegram']) ? true : false),
             'viber_b' => (!empty($data['Viber']) ? true : false),
             'whatsapp_b' => (!empty($data['whatsapp']) ? true : false),

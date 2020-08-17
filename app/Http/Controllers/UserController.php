@@ -36,7 +36,8 @@ class UserController extends Controller
 
         User::find($id)->update([
             'description' => $request['descr'],
-            'role' => $request['role']
+            'role' => $request['role'],
+            'public' => false
         ]);
         
         return redirect()->route('home');

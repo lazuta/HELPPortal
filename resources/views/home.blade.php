@@ -19,7 +19,11 @@
                                 @ELSEIF($user['status'] == 'active')
                                     <span class="badge badge-success">Активно</span>
                                 @ENDIF
-                                
+
+                                @IF(!$user['public'] && $user['status'] == 'active')
+                                    <span class="badge badge-success">Заявка на помощь в обработке</span>
+                                @ENDIF
+
                                 @IF($user->role->role_ru)
                                     - {{ $user->role->role_ru }}
                                 @ENDIF

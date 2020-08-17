@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'description', 'phone', 'telegram_b', 'viber_b', 'whatsapp_b', 'email_b', 'phone_b', 'status', 'role_id'
+        'name', 'email', 'password', 'description', 'phone', 'telegram_b', 'viber_b', 'whatsapp_b', 'email_b', 'phone_b', 'status', 'role_id', 'public'
     ];
 
     /**
@@ -37,9 +37,14 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    // public function role()
+    // {
+    //     return $this->hasOne('App\Role', 'id');
+    // }
+
     public function role()
     {
-        return $this->hasOne('App\Role', 'id');
+        return $this->belongsTo('App\Role', 'role_id');
     }
 
 }

@@ -10,7 +10,7 @@ class HelpController extends Controller
 {
     public function index()
     {
-        $users = User::where('status', 'active')->get();
+        $users = User::where('public', true)->where('status', 'active')->get();
         $roles = Role::get()->all();
 
         return view('help', [
