@@ -12,11 +12,17 @@
                             @IF($user->role[0]->role_ru)
                             <span class="badge badge-pill badge-secondary">{{ $user->role[0]->role_ru }}</span>
                             @ENDIF
-                            
+
                             {{ $user->name }}
                     </div>
-
                     <div class="card-body">
+                        @IF($user->description)
+                            <h6 class="card-title">Могу Вам помочь:</h6>
+
+                            {{ $user->description }}
+                        @ENDIF
+                    </div>
+                    <div class="card-footer">
                         <h6 class="card-title">Способы связи:</h6>
 
                         @IF(!empty($user->phone_b))
