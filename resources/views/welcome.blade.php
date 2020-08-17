@@ -71,6 +71,7 @@
 
             .w_logo img {
                 width: 500px;
+                animation: logo 2s ease-in-out;
             }
 
             @media(max-width: 560px) {
@@ -82,6 +83,14 @@
             @media(max-width: 330px) {
                 .w_logo img {
                     width: 200px;
+                }
+            }
+
+            @keyframes logo {
+                from {
+                    transform: rotate(0deg);
+                } to {
+                    transform: rotate(360deg);
                 }
             }
         </style>
