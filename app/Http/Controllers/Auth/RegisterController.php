@@ -73,10 +73,7 @@ class RegisterController extends Controller
             'description' => '',
             'public' => false,
             'telegram_b' => (!empty($data['telegram']) ? true : false),
-            'viber_b' => (!empty($data['Viber']) ? true : false),
-            'whatsapp_b' => (!empty($data['whatsapp']) ? true : false),
             'email_b' => (!empty($data['mail_p']) ? true : false),
-            'phone_b' => (!empty($data['phone_b']) ? true : false),
             'password' => Hash::make($data['password']),
         ]);
     }

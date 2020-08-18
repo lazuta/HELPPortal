@@ -12,7 +12,7 @@
                         @csrf
 
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('ФИО') }}</label>
+                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Имя') }}</label>
 
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
@@ -26,10 +26,10 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="phone" class="col-md-4 col-form-label text-md-right">{{ __('Контактный телефон') }}</label>
+                            <label for="phone" class="col-md-4 col-form-label text-md-right">{{ __('Telegram username') }}</label>
 
                             <div class="col-md-6">
-                                <input id="phone"  type=phone class="form-control @error('phone') is-invalid @enderror" name="phone" value="{{ old('phone') }}" required autocomplete="phone" autofocus>
+                                <input id="text"  type=phone class="form-control @error('phone') is-invalid @enderror" name="phone" value="{{ old('phone') }}" required autocomplete="phone" autofocus>
 
                                 @error('phone')
                                     <span class="invalid-feedback" role="alert">
@@ -57,21 +57,6 @@
                             <div class="form-check  form-check-inline">
                                 <input type="checkbox" class="form-check-input" id="telegram" name="telegram">
                                 <label class="form-check-label" for="telegram" >Telegram</label>
-                            </div>
-
-                            <div class="form-check  form-check-inline">
-                                <input type="checkbox" class="form-check-input" id="Viber" name="Viber">
-                                <label class="form-check-label" for="Viber" >Viber</label>
-                            </div>
-
-                            <div class="form-check  form-check-inline">
-                                <input type="checkbox" class="form-check-input" id="whatsapp" name="whatsapp">
-                                <label class="form-check-label" for="whatsapp" >Whatsapp</label>
-                            </div>
-
-                            <div class="form-check  form-check-inline">
-                                <input type="checkbox" class="form-check-input" id="phone_b" name="phone_b">
-                                <label class="form-check-label" for="phone_b" >Телефон</label>
                             </div>
 
                             <div class="form-check  form-check-inline">

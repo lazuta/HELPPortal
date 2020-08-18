@@ -25,42 +25,15 @@
                             {{ $user->name }}
                     </div>
                     <div class="card-body">
-                        @IF($user->description)
-                            <h6 class="card-title">Могу Вам помочь:</h6>
-
-                            <p>{{ $user->description }}</p>
-                        @ENDIF
-                    </div>
-                    <div class="card-footer">
-                        <h6 class="card-title">Способы связи:</h6>
-
-                        @IF(!empty($user->phone_b))
+                        @IF(!empty($user->telegram_b))
                             <div>
-                                <a href="tel:{{$user->phone}}"><i class="fas fa-phone"></i> {{$user->phone}}</a>
+                                <a href="https://telegram.me/{{$user->phone}}"><i class="fab fa-telegram"></i> {{$user->phone}}</a>
                             </div>
                         @ENDIF
 
                         @IF(!empty($user->email_b))
                             <div>
                                 <a href="mailto:{{$user->email}}"><i class="fas fa-envelope-open-text"></i> {{$user->email}}</a>
-                            </div>
-                        @ENDIF
-
-                        @IF(!empty($user->telegram_b))
-                            <div>
-                                <i class="fab fa-telegram"></i> {{$user->phone}}
-                            </div>
-                        @ENDIF
-                        
-                        @IF(!empty($user->viber_b))
-                            <div>
-                                <i class="fab fa-viber"></i> {{$user->phone}}
-                            </div>
-                        @ENDIF                        
-
-                        @IF(!empty($user->whatsapp_b))
-                            <div>
-                                <i class="fab fa-whatsapp"></i> {{$user->phone}}
                             </div>
                         @ENDIF
                     </div>
