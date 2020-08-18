@@ -8,7 +8,9 @@ use Illuminate\Http\Request;
 class AdminComtroller extends Controller
 {
     public function show() {
-        $users = User::where('public', false)->where('status', 'active')->get();
+        $users = User::where('public', false)->where(function($query) {
+            $query->where('status', 'active')->orWhere('status', 'work');
+        })->get();
 
         return view('admin', [
             'users' => $users,
@@ -21,7 +23,7 @@ class AdminComtroller extends Controller
             'public' => true
         ]);
 
-        return redirect()->view('admin');
+        return redirect()->route('admin');
     }
 
     public function no(Request $request, $id)
@@ -32,6 +34,6 @@ class AdminComtroller extends Controller
             'public' => false
         ]);
 
-        return redirect()->view('admin');
+        return redirect()->route('admin');
     }
 }

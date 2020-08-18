@@ -25,6 +25,9 @@
                             {{ $user->name }}
                     </div>
                     <div class="card-body">
+                        {{ $user->description }}
+                    </div>
+                    <div class="card-footer">
                         @IF(!empty($user->telegram_b))
                             <div>
                                 <a href="https://telegram.me/{{$user->phone}}"><i class="fab fa-telegram"></i> {{$user->phone}}</a>
